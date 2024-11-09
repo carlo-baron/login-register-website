@@ -25,3 +25,32 @@
     </div>
 </body>
 </html>
+
+<?php
+    if(isset($_POST["register"])){
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    
+        
+
+        if($username == null || $password == null){
+            echo "<script>alert('Enter Username and Password')'";
+        }else{
+            $check_username = "SELECT * FROM datas WHERE username = '$username'";
+            $result = mysqli_query($connection, $check_username);
+
+            if(mysqli_num_rows($result) > 0){
+                echo "<script>alert('Already Registerd')</script>";
+            }else{
+                $sql = "INSERT INTO datas (username, password)
+                VALUES ('$username', '$hashed_password')";
+                mysqli_query($connection,$sql);
+
+                echo "<script>alert('Successfully Registered')</script>";
+            }
+        }
+    }
+
+    mysqli_close($connection);
+?>
