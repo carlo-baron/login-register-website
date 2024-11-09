@@ -18,4 +18,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    height: 2.5rem;
 }

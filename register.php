@@ -1,3 +1,6 @@
+<?php
+    include("database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,7 @@
 </head>
 <body>
     <div class="form-body">
-        <h1>REGISTER</h1
+        <h1>REGISTER</h1>
         <form action="register.php" method="post">
             <label for="username">Username:</label><br>
             <input type="text" name="username"><br>

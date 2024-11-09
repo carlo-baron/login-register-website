@@ -1,3 +1,7 @@
+<?php
+    include("database.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +12,8 @@
 </head>
 <body>
     <div class="form-body">
-        <h1>LOGIN</h1
-        <form action="index.php" method="post">
+        <h1>LOGIN</h1>
+        <form action="check.php" method="post">
             <label for="username">Username:</label><br>
             <input type="text" name="username"><br>
             <label for="username">Password:</label><br>
