@@ -15,9 +15,9 @@
         <h1>LOGIN</h1>
         <form action="check.php" method="post">
             <label for="username">Username:</label><br>
-            <input type="text" name="username"><br>
+            <input type="text" name="username" required><br>
             <label for="username">Password:</label><br>
-            <input type="password" name="password"><br>
+            <input type="password" name="password" required><br>
             <input type="submit" name="login" value="Log In">
         </form>
         <form action="register.php">

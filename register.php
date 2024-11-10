@@ -14,9 +14,9 @@
         <h1>REGISTER</h1>
         <form action="register.php" method="post">
             <label for="username">Username:</label><br>
-            <input type="text" name="username"><br>
+            <input type="text" name="username" required><br>
             <label for="username">Password:</label><br>
-            <input type="password" name="password"><br>
+            <input type="password" name="password" required><br>
             <input type="submit" name="register" value="Register">
         </form>
         <form action="index.php">
