@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include("database.php");
 
     if(isset($_POST['login'])){
@@ -17,6 +18,14 @@
 
                 if($verify_password){
                     echo "Successfully Logged In";
+                    $_SESSION["username"] = $username;
+                    $_SESSION["password"] = $password;
+
+                    $sql_get_reg_date = "SELECT * FROM datas WHERE username = '{$_SESSION['username']}'";
+                    $result = mysqli_query($connection, $sql_get_reg_date);
+                    $row = mysqli_fetch_assoc($result);
+                    
+                    echo '<br>' . 'registered on: ' . $row["reg_date"];
                 }else{
                     echo "Incorrect Password";
                 }
